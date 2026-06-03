@@ -1,6 +1,6 @@
 # ⚡ AWS Auto-Scale API
 
-> Production-grade, self-healing infrastructure that handles **1000 concurrent users** at **1,268 req/s** with **zero errors** — fully automated from git push to live deployment.
+> Production-grade, self-healing infrastructure that handles **1000 concurrent users** at **1,268 req/s** with **zero errors** - fully automated from git push to live deployment.
 
 ---
 
@@ -53,7 +53,7 @@
 
 ---
 
-## 📊 Load Test Results — 1000 Concurrent Users
+## 📊 Load Test Results - 1000 Concurrent Users
 
 ![k6 Load Test Results](assets/k6-results.png)
 
@@ -96,7 +96,7 @@
 - Git push → GitHub Actions triggers
 - New Docker image built and pushed to ECR
 - ASG Instance Refresh with `MinHealthyPercentage=50`
-- Rolling update — old instances drain, new ones warm up
+- Rolling update - old instances drain, new ones warm up
 
 ---
 
@@ -122,7 +122,7 @@ aws-autoscale-api/
 
 ## 🛠️ Infrastructure (Terraform)
 
-Everything provisioned as code — **one command to create, one command to destroy:**
+Everything provisioned as code  **one command to create, one command to destroy:**
 
 ```bash
 cd terraform
@@ -154,7 +154,7 @@ terraform destroy  # tears down everything
 | `GET /actuator/health` | Health check (used by ALB) |
 | `GET /actuator/prometheus` | Prometheus metrics |
 
-### Sample Response — `/api/hello`
+### Sample Response - `/api/hello`
 ```json
 {
   "message": "Hello from AWS Auto-Scaling Infrastructure!",
@@ -163,7 +163,7 @@ terraform destroy  # tears down everything
   "status": "healthy"
 }
 ```
-> The `server` field changes on each refresh — proof the ALB is routing across multiple EC2 instances.
+> The `server` field changes on each refresh proof the ALB is routing across multiple EC2 instances.
 
 ---
 
@@ -207,7 +207,7 @@ GitHub Actions
 
 ---
 
-## 🛠️ Chaos Engineering — Self Healing Demo
+## 🛠️ Chaos Engineering - Self Healing Demo
 
 1. Go to AWS Console → EC2 → Instances
 2. Terminate any `autoscale-ec2` instance manually
@@ -254,4 +254,4 @@ cd terraform && terraform destroy
 
 ## 👤 Author
 
-**Sumeet** — [GitHub](https://github.com/Sumeet-Y1)
+**Sumeet** - [GitHub](https://github.com/Sumeet-Y1)
